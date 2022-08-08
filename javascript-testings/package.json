@@ -1,0 +1,20 @@
+{
+  "name": "java-script-tests",
+  "version": "1.0.0",
+  "description": "Javascript project to test features and libraries for fun and learning",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
