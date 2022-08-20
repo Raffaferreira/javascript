@@ -15,5 +15,8 @@ function returnSum(value1, value2){
     return value1 + value2;
 }
 
+export default function tr(value1, value2){
+    return value1 + value2;
+}
 
 export { getFullName, returnMultiplication, returnSubtraction, returnSum };
