@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     console.log(req);
     console.log(res);
-    res.send('Hello World!')
+    res.render('index.html', { title: 'World' })
 });
 
 router.get('/about', (req, res) => {
@@ -19,4 +19,6 @@ router.get('/personalcontacts', (req, res) => {
     res.send('personalcontacts')
 });
 
-export { router as IndexRouting };
+
+export default router;
+//export { router as IndexRouting };

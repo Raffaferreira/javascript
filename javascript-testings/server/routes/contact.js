@@ -43,5 +43,5 @@ router.route('/article')
     res.send('Update the article');
 });
 
-
-export { router as ContactRouting };
+export default router;
+//export { router as ContactRouting };
