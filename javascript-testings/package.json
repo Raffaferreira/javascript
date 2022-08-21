@@ -8,6 +8,7 @@
   },
   "description": "Javascript project to test features and libraries for fun and learning",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "node-ev":"npm install -g win-node-env",
     "test": "jest",
