@@ -16,6 +16,11 @@ app.use((req, res) => res.status(404).json({ message: 'No route found' }));
 app.use('/contact', ContactRouting);
 app.use('/index', IndexRouting);
 
+app.all('/secret', function (req, res, next) {
+    console.log('Accessing the secret section ...');
+    next(); 
+});
+
 export default app;
 
 

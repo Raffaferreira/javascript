@@ -8,14 +8,14 @@
   },
   "description": "Javascript project to test features and libraries for fun and learning",
   "main": "server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "node-ev":"npm install -g win-node-env",
     "test": "jest",
     "tsc": "tsc",
     "start": "npm run prod",
     "build": "npm-run-all clean transpile",
     "server": "node ./dist-server/bin/www",
+    "serverdev": "node ./server/bin/www",
     "dev": "SET NODE_ENV=development npm-run-all build server",
     "prod": "SET NODE_ENV=production npm-run-all build server",
     "transpile": "babel ./server --out-dir dist-server",
@@ -59,6 +59,7 @@
   "devDependencies": {
     "@types/debug": "^4.1.7",
     "@types/express": "^4.17.13",
+    "@types/jest": "^28.1.7",
     "jest": "^28.1.3",
     "typescript": "^4.7.4"
   }

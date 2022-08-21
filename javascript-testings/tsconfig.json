@@ -103,5 +103,5 @@
   "include": [
     "**/*" //  "**/" matches any directory nested to any level and "*" matches zero or more characters (excluding directory separators)
   ],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts", "src/**/*.test.ts"]
 }
