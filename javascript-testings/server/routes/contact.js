@@ -1,11 +1,15 @@
 import helper from '../modules/helpers.js'
 import extension from '../modules/extensions.js'
-import { contact, getbookbycategory } from '../modules/routesnamed';
-import { Alligator, myNumbers, myLogger} from '../modules/utils'
+import { contact, getbookbycategory } from '../modules/routesnamed.js';
+import { Alligator, myNumbers, myLogger} from '../modules/utils.js'
 
 import express from 'express'
 const router = express.Router();
 
+/**
+ * @param {any} request of this body
+ * @param {any} response 
+ */
 router.get(contact, function (req, res, next) {
 
     helper.getFullName("","");

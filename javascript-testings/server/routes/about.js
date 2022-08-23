@@ -1,7 +1,7 @@
 'use strict';
 const helper =  require('../modules/helpers')
-import extension from '../modules/extensions'
-import * as Utils from '../modules/utils';
+import extension from '../modules/extensions.js'
+import * as Utils from '../modules/utils.js';
 
 import { Router } from 'express';
 const router = Router();
