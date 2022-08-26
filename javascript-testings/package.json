@@ -7,8 +7,7 @@
     "url": "https://github.com/Raffaferreira"
   },
   "description": "Javascript project to test features and libraries for fun and learning",
-  "main": "server.js",
-  "type": "commonjs",
+  "main": "server.js", 
   "scripts": {
     "test": "jest",
     "tsc": "tsc",
@@ -53,6 +52,7 @@
     "express": "^4.18.1",
     "gulp-babel": "^8.0.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "morgan": "^1.10.0",
