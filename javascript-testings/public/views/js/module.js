@@ -1,7 +1,15 @@
-function debug(name){
+'use strict'
+
+function debug(name) {
     console.log("Debugging ", name);
 }
 
-function alert(text){
-    alert("Olá "+text+" isso é um teste")
+function alert(text) {
+    alert("Olá " + text + " isso é um teste")
 }
+
+
+//module.exports = {
+//    debug,
+//    alert
+//}
