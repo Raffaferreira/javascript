@@ -1,24 +1,25 @@
 import express from 'express'
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/', function(req, res) {
     console.log(req);
     console.log(res);
-    res.render('index.html', { title: 'World' })
+
+    res.render('index.html');
 });
 
 router.get('/about', (req, res) => {
     console.log(req);
     console.log(res);
-    res.send('about')
+    res.sendFile(__dirname + '../public/views/about.html')
 });
 
-router.get('/personalcontacts', (req, res) => {
+router.get('/contacts', (req, res) => {
     console.log(req);
     console.log(res);
-    res.send('personalcontacts')
+    res.sendFile('contact.html', { root: app.get('views') })
 });
 
 
 export default router;
-//export { router as IndexRouting };
