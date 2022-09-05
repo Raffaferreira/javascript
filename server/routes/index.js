@@ -9,16 +9,19 @@ router.get('/', function(req, res) {
     res.render('index.html');
 });
 
-router.get('/about', (req, res) => {
+router.get('/about', function(req, res) {
     console.log(req);
     console.log(res);
-    res.sendFile(__dirname + '../public/views/about.html')
+    
+    console.log(app.get('views'));
+    //res.sendFile(path.join(__dirname, '../public/views/about.html'));
+    //res.sendFile('about.html', { root: app.get('views') });
 });
 
 router.get('/contacts', (req, res) => {
     console.log(req);
     console.log(res);
-    res.sendFile('contact.html', { root: app.get('views') })
+    res.sendFile('contact.html', { root: app.get('views') });
 });
 
 

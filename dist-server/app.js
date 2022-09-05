@@ -27,12 +27,10 @@ app.use(_express["default"].urlencoded({
 }));
 app.use((0, _cookieParser["default"])());
 app.use(_express["default"]["static"](_path["default"].join(__dirname, '../public')));
-console.log("Express static name :", _path["default"].join(__dirname, '../public'));
-app.set('views', _path["default"].join(__dirname, '../public/views'));
-console.log("Pasta das views :", app.get('views'));
+app.set('views', _path["default"].join(__dirname, '../public/views/'));
 console.log("Diretorio do projeto ", __dirname);
-console.log("Diretorio do projeto com path.join", _path["default"].join(__dirname, '../public'));
-console.log("Diretorio full do projeto ", _express["default"]["static"](_path["default"].join(__dirname, '../public')));
+console.log("Pasta das views :", app.get('views'));
+console.log("Express static name :", _path["default"].join(__dirname, '../public'));
 app.use(function (req, res) {
   return res.status(404).json({
     message: 'No route found'
