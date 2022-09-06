@@ -6,15 +6,14 @@ import logger from 'morgan';
 import contactRouting from './routes/contact';
 import indexRouting from './routes/index'; 
 
-
 var app = express()
 
+app.set('views', path.join(__dirname, '../public/views/'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
-app.set('views', path.join(__dirname, '../public/views/'));
 
 console.log("Diretorio do projeto ", __dirname);
 console.log("Pasta das views :", app.get('views'));
