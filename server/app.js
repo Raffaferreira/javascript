@@ -1,7 +1,7 @@
 import express from 'express'
 import path from 'path';
 import cookieParser from 'cookie-parser';
-import { logger, morgan } from 'morgan';
+import logger from 'morgan';
 import contactRouting from './routes/contact';
 import indexRouting from './routes/index'; 
 
@@ -9,7 +9,7 @@ var app = express()
 
 app.set('views', path.join(__dirname, '../public/views/'));
 app.use(logger('dev'));
-app.use(morgan('combined'));
+app.use(logger('combined'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
