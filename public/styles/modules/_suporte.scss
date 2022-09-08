@@ -1,0 +1,55 @@
+$text-color-background: #ffd000;
+$text-color: rgb(255, 157, 29);
+$border-color: rgb(66, 100, 253);
+
+// Define tipografia
+html {
+  font: $font-style $font-variant $font-weight #{$font-size}/#{$line-height} $font-family;
+}
+
+// Centraliza verticalmente qualquer coisa
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow {
+  box-shadow: 4px 4px 4px -2px rgba($border-color, 0.6);
+}
+
+@mixin box-shadow-parameter($color) {
+  box-shadow: 4px 4px 4px -2px $color;
+}
+
+@mixin make-bold ($bool) {
+  @if $bool ==true {
+    font-weight: bold;
+  }
+}
+
+@mixin text-effect ($value) {
+  @if $value == danger {
+    color: red;
+  } @else if $value == alert {
+    color: yellow;
+  } @else{
+    color: black;
+  }
+}
+
+.container {
+  @include box-shadow();
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+
+  p {
+    @include box-shadow(rgba(0, 0, 0, 0.6));
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    color: $text-color;
+    @include make-bold(true);
+  }
+}
