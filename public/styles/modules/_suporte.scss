@@ -1,6 +1,4 @@
-$text-color-background: #ffd000;
-$text-color: rgb(255, 157, 29);
-$border-color: rgb(66, 100, 253);
+@import 'base';
 
 // Define tipografia
 html {
@@ -12,6 +10,19 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  @extend .flex;
+  flex-direction: column;
+  align-items: inherit;
+  height: 100%;
 }
 
 @mixin box-shadow {
@@ -29,12 +40,48 @@ html {
 }
 
 @mixin text-effect ($value) {
-  @if $value == danger {
+  @if $value ==danger {
     color: red;
-  } @else if $value == alert {
+  }
+
+  @else if $value ==alert {
     color: yellow;
-  } @else{
+  }
+
+  @else {
     color: black;
+  }
+}
+
+//Option 1
+@for $i from 1 through 6 {
+  .text-#{$i} {
+    font-size: 15px * $i
+  }
+}
+
+@function set-text-color($color) {
+  @if lightness($color)>70 {
+    @return #000;
+  }
+
+  @else {
+    @return #fff;
+  }
+}
+
+//Option 2
+$colors: (
+  color1:blue,
+  color2: red,
+  color3:green,
+  color4: aqua
+);
+
+@each $key,
+$color in $colors {
+  .#{$color}-text {
+    color: $color;
   }
 }
 
@@ -51,5 +98,21 @@ html {
     width: 100px;
     color: $text-color;
     @include make-bold(true);
+
+    &:hover {
+      color: blueviolet;
+    }
   }
+}
+
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+
+p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
 }
