@@ -1,5 +1,5 @@
 /* Arquivo SCSS Principal */  
 // Base 
-@import 'suporte';
-@import 'variaveis';
-@import 'principal.scss';
+@import 'shared/variaveis';
+@import 'shared/base';
+@import 'styles/suporte';
