@@ -1,7 +1,7 @@
-import helper from '../modules/helpers.js'
+import helper from '../modules/helpers'
 import extension from '../modules/extensions.js'
 import { contact, getbookbycategory } from '../modules/routesnamed.js';
-import { Alligator, myNumbers, myLogger} from '../modules/utils.js'
+import { Alligator, myNumbers, myLogger } from '../modules/utils.js'
 
 import express from 'express'
 const router = express.Router();
@@ -12,7 +12,7 @@ const router = express.Router();
  */
 router.get(contact, function (req, res, next) {
 
-    helper.getFullName("","");
+    helper.getFullName("", "");
     extension.returnMultiplication(5, 5);
     extension.returnSum(4, 4);
 
@@ -26,7 +26,7 @@ router.get(contact, function (req, res, next) {
     res.render("contact.html");
 });
 
-router.get(getbookbycategory, function(req, res) {
+router.get(getbookbycategory, function (req, res) {
     console.log(req.params);
     var username = req.params.user;
     var category = req.paramas.categorySlug;
@@ -37,15 +37,15 @@ router.get(getbookbycategory, function(req, res) {
 });
 
 router.route('/article')
-.get(function(req, res) {
-    res.send('Get the article');
-})
-.post(function(req, res) {
-    res.send('Add an article');
-})
-.put(function(req, res) {
-    res.send('Update the article');
-});
+    .get(function (req, res) {
+        res.send('Get the article');
+    })
+    .post(function (req, res) {
+        res.send('Add an article');
+    })
+    .put(function (req, res) {
+        res.send('Update the article');
+    });
 
 export default router;
 //export { router as ContactRouting };

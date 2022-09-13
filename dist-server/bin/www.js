@@ -27,8 +27,7 @@ _app["default"].set('port', port);
  */
 
 
-var environment = process.env.NODE_ENV;
-console.log("Environment Variable ", environment);
+var environment = process.env.NODE_ENV; //console.log("Environment Variable ", environment);
 
 var server = _http["default"].createServer(_app["default"]);
 /**

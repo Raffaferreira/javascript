@@ -21,7 +21,7 @@ app.set('port', port);
  * Create HTTP server.
  */
 var environment = process.env.NODE_ENV;
-console.log("Environment Variable ", environment);
+//console.log("Environment Variable ", environment);
 
 var server = http.createServer(app);
 
