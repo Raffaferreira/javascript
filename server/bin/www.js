@@ -98,6 +98,10 @@ function onListening() {
   console.log("Example app listening at http://%s:%s", host, port);
 }
 
+/**
+ * npm install --production
+ * set NODE_ENV=production
+ */
 if(environment === 'production') {
   console.log("production", environment);
 } else {
